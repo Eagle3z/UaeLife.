@@ -1,128 +1,46 @@
 :root {
-    --bg-black: #050505;
+    --bg-black: #080808;
     --dark-grey: #121212;
-    --metallic: #8a8a8a;
-    --accent: #ffffff;
+    --metallic: #a0a0a0;
+    --white: #ffffff;
     --glass: rgba(255, 255, 255, 0.05);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+body { background-color: var(--bg-black); color: var(--white); scroll-behavior: smooth; }
 
-body {
-    background-color: var(--bg-black);
-    color: white;
-    scroll-behavior: smooth;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 8%;
-    background: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 1px solid var(--glass);
-}
-
-.logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 8%; background: rgba(0,0,0,0.9); position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid var(--glass); }
+.logo { font-size: 1.5rem; font-weight: 900; }
 .accent { color: var(--metallic); }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-right: 20px; }
+.nav-links a { text-decoration: none; color: var(--metallic); font-weight: 600; font-size: 0.9rem; }
+.btn-join { background: var(--white); color: black !important; padding: 5px 15px; border-radius: 4px; }
 
-.nav-links { display: flex; list-style: none; align-items: center; }
-.nav-links li { margin-left: 25px; }
-.nav-links a { text-decoration: none; color: #ccc; font-weight: 600; transition: 0.3s; }
-.nav-links a:hover { color: white; }
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle, #1a1a1a 0%, #080808 100%); }
+.main-logo { width: 140px; border-radius: 50%; border: 3px solid var(--metallic); filter: grayscale(100%); margin-bottom: 20px; }
+.hero h1 { font-size: 3.5rem; letter-spacing: 2px; }
 
-.btn-join { background: white; color: black !important; padding: 8px 20px; border-radius: 5px; }
+.primary-btn, .secondary-btn { padding: 10px 30px; text-decoration: none; border-radius: 4px; font-weight: 700; margin: 10px; display: inline-block; transition: 0.3s; }
+.primary-btn { background: var(--white); color: black; }
+.secondary-btn { border: 1px solid var(--metallic); color: var(--white); }
 
-/* Hero */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), var(--bg-black)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80'); /* خلفية اختيارية لـ دبي */
-    background-size: cover;
-    background-position: center;
-}
+.section { padding: 80px 10%; }
+.dark-bg { background: var(--dark-grey); }
+.section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; color: var(--metallic); }
 
-.main-logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid var(--metallic);
-    filter: grayscale(100%);
-    margin-bottom: 20px;
-}
+.rules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.rule-card { background: var(--bg-black); padding: 30px; border-radius: 8px; border: 1px solid var(--glass); }
+.rule-card.highlight { border-color: var(--metallic); }
+.rule-card h3 { margin-bottom: 15px; color: var(--metallic); }
+.rule-card ul { list-style: none; }
+.rule-card li { margin-bottom: 10px; font-size: 0.9rem; }
 
-.hero h1 { font-size: 4rem; font-weight: 900; margin-bottom: 10px; }
+.rules-list { max-width: 900px; margin: 0 auto; }
+.list-item { background: var(--glass); padding: 15px; margin-bottom: 10px; border-right: 3px solid var(--metallic); font-size: 0.95rem; }
 
-.hero-btns { margin-top: 30px; }
-.primary-btn, .secondary-btn {
-    padding: 12px 35px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 700;
-    margin: 0 10px;
-    display: inline-block;
-}
-.primary-btn { background: white; color: black; }
-.secondary-btn { border: 1px solid var(--metallic); color: white; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.card { background: var(--bg-black); padding: 30px; text-align: center; border-radius: 8px; border: 1px solid var(--glass); text-decoration: none; color: var(--white); transition: 0.3s; }
+.card:hover { border-color: var(--metallic); transform: translateY(-5px); }
 
-/* Sections */
-.section { padding: 100px 10%; }
-.dark-bg { background-color: var(--dark-grey); }
-.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 60px; position: relative; }
-
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-.card {
-    background: var(--glass);
-    padding: 40px;
-    text-align: center;
-    border-radius: 15px;
-    border: 1px solid var(--glass);
-    transition: 0.3s;
-    text-decoration: none;
-    color: white;
-}
-.card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.1); }
-.icon { font-size: 3rem; margin-bottom: 15px; }
-
-/* Rules */
-.rules-container { max-width: 800px; margin: 0 auto; }
-.rule-item {
-    display: flex;
-    align-items: center;
-    background: var(--bg-black);
-    padding: 20px;
-    margin-bottom: 15px;
-    border-right: 4px solid var(--metallic);
-    border-radius: 5px;
-}
-.rule-num { font-weight: 900; font-size: 1.5rem; margin-left: 20px; color: var(--metallic); }
-
-/* Vladimir Feature */
-.vlad-box {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(45deg, #111, #222);
-    padding: 40px;
-    border-radius: 20px;
-    gap: 40px;
-}
-.vlad-box img { width: 250px; border-radius: 15px; border: 2px solid var(--metallic); filter: grayscale(50%); }
-
-footer { text-align: center; padding: 50px; color: #444; border-top: 1px solid var(--glass); }
-
-@media (max-width: 768px) {
-    .vlad-box { flex-direction: column; text-align: center; }
-    .hero h1 { font-size: 2.5rem; }
-}
+footer { text-align: center; padding: 40px; color: #444; font-size: 0.8rem; }
