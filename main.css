@@ -9,7 +9,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
 body { background-color: var(--bg-black); color: var(--white); scroll-behavior: smooth; }
 
-/* Navbar */
+/* القائمة العلوية */
 .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 8%; background: rgba(0,0,0,0.9); position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid var(--glass); }
 .logo { font-size: 1.5rem; font-weight: 900; }
 .accent { color: var(--metallic); }
@@ -19,7 +19,7 @@ body { background-color: var(--bg-black); color: var(--white); scroll-behavior: 
 .nav-links a:hover { color: white; }
 .btn-join { background: var(--white); color: black !important; padding: 5px 15px; border-radius: 4px; }
 
-/* Hero */
+/* الواجهة الرئيسية */
 .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle, #1a1a1a 0%, #080808 100%); }
 .main-logo { width: 140px; border-radius: 50%; border: 3px solid var(--metallic); filter: grayscale(100%); margin-bottom: 20px; }
 .hero h1 { font-size: 3.5rem; letter-spacing: 2px; font-weight: 900; }
@@ -28,18 +28,11 @@ body { background-color: var(--bg-black); color: var(--white); scroll-behavior: 
 .primary-btn { background: var(--white); color: black; }
 .secondary-btn { border: 1px solid var(--metallic); color: var(--white); }
 
-/* Sections */
+/* الأقسام والقوانين */
 .section { padding: 80px 10%; }
 .dark-bg { background: var(--dark-grey); }
 .section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; color: var(--metallic); font-weight: 900; }
 
-/* Platforms Grid */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 600px; margin: 0 auto; }
-.card { background: var(--bg-black); padding: 40px; text-align: center; border-radius: 8px; border: 1px solid var(--glass); text-decoration: none; color: var(--white); transition: 0.3s; }
-.card:hover { border-color: var(--metallic); transform: translateY(-5px); }
-.icon { font-size: 2.5rem; margin-bottom: 15px; }
-
-/* Rules */
 .rules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 .rule-card { background: var(--bg-black); padding: 30px; border-radius: 8px; border: 1px solid var(--glass); }
 .rule-card.highlight { border-color: var(--metallic); }
